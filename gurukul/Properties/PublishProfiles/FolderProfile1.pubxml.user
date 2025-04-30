@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Work\Repo\hdbltech\ZPSataraWebsite\Publish</_PublishTargetUrl>
+    <History>False|2025-04-26T15:53:33.5972074Z||;False|2025-04-26T21:21:36.9386806+05:30||;False|2025-04-26T21:20:40.2324644+05:30||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/22/2013 14:13:40</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>02/22/2013 14:13:40</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>04/26/2025 21:47:48</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>04/26/2025 21:47:48</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/02/2015 15:02:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/02/2015 15:02:26</publishTime>
+    </File>
+    <File Include="bin/gurukul.dll">
+      <publishTime>04/26/2025 21:24:53</publishTime>
+    </File>
+    <File Include="bin/gurukul.pdb">
+      <publishTime>04/26/2025 21:24:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 07:36:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 17:18:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/04/2014 02:03:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/19/2015 01:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/19/2015 01:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/19/2015 01:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/19/2015 01:49:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/19/2015 01:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/19/2015 01:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/19/2015 01:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/19/2015 01:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/19/2015 01:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/19/2015 01:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/19/2015 01:49:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/19/2015 01:49:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 09:34:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 09:32:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/11/2014 20:56:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 09:32:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 09:34:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 09:34:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 09:34:30</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>07/17/2013 22:33:52</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>04/26/2025 20:55:58</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="css/maps/style.css.map">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>04/26/2025 20:58:12</publishTime>
+    </File>
+    <File Include="Database/microte2_ZPSangli22_23.edmx.diagram">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="images/GUNPATRAK.jpg">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="images/logo.png">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="images/pqr.jpg">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="images/ResultImage.jpeg">
+      <publishTime>04/21/2025 19:24:49</publishTime>
+    </File>
+    <File Include="jquery/jquery-1.8.3.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/animate-css/animate.css">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/bootstrap/dist/js/bootstrap.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/bootstrap/dist/js/npm.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/count-to/jquery.countTo.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/jQuery-nav/jquery.nav.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/jquery/dist/jquery.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/magnific-popup/dist/jquery.magnific-popup.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/magnific-popup/dist/jquery.magnific-popup.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/magnific-popup/dist/magnific-popup.css">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/magnific-popup/package.json">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/masonry/dist/masonry.pkgd.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/masonry/dist/masonry.pkgd.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/mixitup/dist/mixitup.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/slick-carousel/slick/ajax-loader.gif">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/slick-carousel/slick/config.rb">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/slick-carousel/slick/fonts/slick.eot">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/slick-carousel/slick/fonts/slick.svg">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/slick-carousel/slick/fonts/slick.ttf">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/slick-carousel/slick/fonts/slick.woff">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/slick-carousel/slick/slick-theme.css">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/slick-carousel/slick/slick.css">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/slick-carousel/slick/slick.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/slick-carousel/slick/slick.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/smooth-scroll/dist/js/smooth-scroll.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/smooth-scroll/dist/js/smooth-scroll.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/Sticky/jquery.sticky.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/themefisher-font/fonts/themefisher-font.eot">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/themefisher-font/fonts/themefisher-font.ttf">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/themefisher-font/fonts/themefisher-font.woff">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/themefisher-font/style.css">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/bower.json">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/css/libs/animate.css">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/css/site.css">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/demo.html">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/dist/wow.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/dist/wow.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/Gruntfile.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/package.json">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/README.md">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/spec/coffeescripts/helpers/SpecHelper.coffee">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/spec/coffeescripts/wow-spec.coffee">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/spec/javascripts/fixtures/custom.html">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/spec/javascripts/fixtures/simple.html">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/spec/javascripts/helpers/SpecHelper.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/spec/javascripts/libs/jasmine-jquery.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/spec/javascripts/libs/jquery.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/spec/javascripts/wow-spec.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="plugins/wow/src/wow.coffee">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>04/26/2025 21:47:43</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>04/26/2025 20:43:38</publishTime>
+    </File>
+    <File Include="Views/Home/Result.cshtml">
+      <publishTime>04/26/2025 20:50:38</publishTime>
+    </File>
+    <File Include="Views/Home/ResultTable.cshtml">
+      <publishTime>04/26/2025 21:17:46</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>04/26/2025 21:29:13</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>03/09/2025 11:13:12</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/26/2025 21:21:36</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

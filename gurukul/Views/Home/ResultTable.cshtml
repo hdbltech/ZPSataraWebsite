@@ -1,0 +1,829 @@
+﻿@model gurukul.Models.SearchResultModel
+@{
+    ViewBag.Title = "ResultTable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="pageTitle">निकाल</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    @@media only screen and (min-width: 769px) {
+        .imgmarksheet {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+
+        .student-Name {
+            position: absolute;
+            top: 33%;
+            left: 30%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .student-Name1 {
+            position: absolute;
+            top: 34%;
+            left: 30%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Dist-Name {
+            position: absolute;
+            top: 49%;
+            left: 20%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Dist-Name1 {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Taluka-Name {
+            position: absolute;
+            top: 49%;
+            left: 64%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Taluka-Name1 {
+            position: absolute;
+            top: 50%;
+            left: 64%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .standard {
+            position: absolute;
+            top: 40%;
+            left: 86%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .standard1 {
+            position: absolute;
+            top: 41%;
+            left: 86%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Marks1 {
+            position: absolute;
+            top: 71%;
+            left: 18%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Marks11 {
+            position: absolute;
+            top: 71%;
+            left: 8%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .MarksU {
+            position: absolute;
+            top: 71%;
+            left: 20%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Marks2 {
+            position: absolute;
+            top: 71%;
+            left: 25%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .rank1 {
+            position: absolute;
+            top: 71%;
+            left: 65%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .rank2 {
+            position: absolute;
+            top: 71%;
+            left: 78%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .rank3 {
+            position: absolute;
+            top: 71%;
+            left: 88%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .rank11 {
+            position: absolute;
+            top: 71%;
+            left: 64%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .rank21 {
+            position: absolute;
+            top: 71%;
+            left: 75%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .rank31 {
+            position: absolute;
+            top: 71%;
+            left: 86%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .rank111 {
+            position: absolute;
+            top: 71%;
+            left: 60%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .rank1U {
+            position: absolute;
+            top: 71%;
+            left: 65%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .rank211 {
+            position: absolute;
+            top: 71%;
+            left: 71%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .rank2U {
+            position: absolute;
+            top: 71%;
+            left: 76%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .rank311 {
+            position: absolute;
+            top: 71%;
+            left: 82%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .rank3U {
+            position: absolute;
+            top: 71%;
+            left: 87%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Total {
+            position: absolute;
+            top: 71%;
+            left: 37%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Total1 {
+            position: absolute;
+            top: 71%;
+            left: 32%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Total2 {
+            position: absolute;
+            top: 71%;
+            left: 36%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .TotalU {
+            position: absolute;
+            top: 71%;
+            left: 38%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Percentage {
+            position: absolute;
+            top: 71%;
+            left: 52%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Percentage1 {
+            position: absolute;
+            top: 71%;
+            left: 45%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .Percentage2 {
+            position: absolute;
+            top: 71%;
+            left: 49%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .PercentageU {
+            position: absolute;
+            top: 71%;
+            left: 52%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .schoolName {
+            position: absolute;
+            top: 41%;
+            left: 30%;
+            color: black;
+            font-size: 1.7vw;
+            max-width: 300px;
+        }
+
+        .schoolName1 {
+            position: absolute;
+            top: 42%;
+            left: 30%;
+            color: black;
+            font-size: 1.7vw;
+            max-width: 300px;
+        }
+
+        .outOff {
+            position: absolute;
+            top: 71%;
+            left: 45%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .outOff1 {
+            position: absolute;
+            top: 71%;
+            left: 42%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .outOffU {
+            position: absolute;
+            top: 71%;
+            left: 45%;
+            color: black;
+            font-size: 1.70vw;
+        }
+
+        .outOff2 {
+            position: absolute;
+            top: 71%;
+            left: 45%;
+            color: black;
+            font-size: 1.70vw;
+        }
+    }
+
+    @@media only screen and (max-width: 768px) {
+        .imgmarksheet {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+
+        .student-Name {
+            position: absolute;
+            top: 33%;
+            left: 30%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .student-Name1 {
+            position: absolute;
+            top: 33%;
+            left: 30%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Dist-Name {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Dist-Name1 {
+            position: absolute;
+            top: 47%;
+            left: 20%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Taluka-Name {
+            position: absolute;
+            top: 50%;
+            left: 64%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Taluka-Name1 {
+            position: absolute;
+            top: 47%;
+            left: 64%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .standard {
+            position: absolute;
+            top: 41%;
+            left: 86%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .standard1 {
+            position: absolute;
+            top: 38%;
+            left: 86%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Marks1 {
+            position: absolute;
+            top: 69%;
+            left: 18%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Marks11 {
+            position: absolute;
+            top: 70%;
+            left: 10%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .MarksU {
+            position: absolute;
+            top: 70%;
+            left: 20%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Marks2 {
+            position: absolute;
+            top: 70%;
+            left: 25%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .rank1 {
+            position: absolute;
+            top: 70%;
+            left: 68%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .rank2 {
+            position: absolute;
+            top: 70%;
+            left: 78%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .rank3 {
+            position: absolute;
+            top: 70%;
+            left: 88%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .rank11 {
+            position: absolute;
+            top: 70%;
+            left: 64%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .rank21 {
+            position: absolute;
+            top: 70%;
+            left: 75%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .rank31 {
+            position: absolute;
+            top: 70%;
+            left: 86%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .rank111 {
+            position: absolute;
+            top: 70%;
+            left: 60%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .rank1U {
+            position: absolute;
+            top: 70%;
+            left: 65%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .rank211 {
+            position: absolute;
+            top: 70%;
+            left: 71%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .rank2U {
+            position: absolute;
+            top: 70%;
+            left: 76%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .rank311 {
+            position: absolute;
+            top: 70%;
+            left: 82%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .rank3U {
+            position: absolute;
+            top: 70%;
+            left: 87%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Total {
+            position: absolute;
+            top: 70%;
+            left: 39%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Total1 {
+            position: absolute;
+            top: 70%;
+            left: 32%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Total2 {
+            position: absolute;
+            top: 70%;
+            left: 36%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .TotalU {
+            position: absolute;
+            top: 70%;
+            left: 38%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Percentage {
+            position: absolute;
+            top: 70%;
+            left: 52%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Percentage1 {
+            position: absolute;
+            top: 70%;
+            left: 45%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .Percentage2 {
+            position: absolute;
+            top: 70%;
+            left: 49%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .PercentageU {
+            position: absolute;
+            top: 70%;
+            left: 52%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .schoolName {
+            position: absolute;
+            top: 42%;
+            left: 28%;
+            color: black;
+            font-size: 2vw;
+            max-width: 300px;
+        }
+
+        .schoolName1 {
+            position: absolute;
+            top: 38%;
+            left: 30%;
+            color: black;
+            font-size: 2vw;
+            max-width: 300px;
+        }
+
+        .outOff {
+            position: absolute;
+            top: 70%;
+            left: 46%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .outOff1 {
+            position: absolute;
+            top: 69%;
+            left: 42%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .outOffU {
+            position: absolute;
+            top: 69%;
+            left: 45%;
+            color: black;
+            font-size: 2vw;
+        }
+
+        .outOff2 {
+            position: absolute;
+            top: 69%;
+            left: 45%;
+            color: black;
+            font-size: 2vw;
+        }
+    }
+</style>
+
+@using (Html.BeginForm("ResultTable", "Home"))
+{
+
+    <section id="pricing">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <h3>दि. २१/०४/२०२५ रोजी प्रसिद्ध होणार्‍या निकाला संदर्भात सूचना</h3>
+                    <ul style="text-align: left; list-style-type: none;">
+                        <li style="color:black;"><b>१.</b> हा निकाल अंतिम आहे </li>
+                        <li style="color:black;"><b>२.</b> निकालासंदर्भात हरकत असलेस मुख्य कार्यालयाशी पत्राद्वारे कळवावे, फोने वरून हरकती स्वीकारल्या जाणार नाहीत. कार्यालयाचा पत्ता -प्लॉट नं ३१/३२, वृंदावन पार्क, एस. एस.सी.बोर्ड जवळ, ५२६/४, ई वॉर्ड, कोल्हापूर, ४१६००८</li>
+                        <li style="color:black;"><b>३.</b> इसरो संदर्भात विद्यार्थ्यांची यादी लवकरच प्रसिद्ध करणेत येईल </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md- col-sm-2 col-xs-12 wow fadeInUp img-responsive container" style="color:gainsboro" data-wow-duration="200ms">
+
+                </div>
+
+                <div class="col-md-8 col-sm-8 col-xs-12 wow fadeInUp img-responsive container" style="color:gainsboro" data-wow-duration="200ms">
+
+                    @if (Model.standard == 1 || Model.standard == 2)
+                    {
+                        <img class="imgmarksheet" src="~/images/english12.jpg" />
+                        <div class="student-Name1">@Model.Name</div>
+                        <div class="Taluka-Name1">@Model.Taluka</div>
+                        <div class="Dist-Name1">@Model.dist</div>
+                        if (Model.standard == 1)
+                        { <div class="standard1">1st</div> }
+                        if (Model.standard == 2)
+                        { <div class="standard1">2nd</div> }
+                        <div class="Marks1">@Model.Marks1</div>
+                        <div class="Total2">@Model.Total</div>
+                        <div class="outOff1">100</div>
+                        <div class="Percentage2">@Model.Percentage%</div>
+                        <div class="schoolName1">@Model.schoolname</div>
+                        <div class="rank111">@Model.TalukaRank</div>
+                        <div class="rank211">@Model.DistaRank</div>
+                        <div class="rank311">@Model.StateRank</div>
+                    }
+                    else
+                    {
+                        <img class="imgmarksheet" src="~/images/english38.jpg" />
+                        <div class="student-Name">@Model.Name</div>
+                        <div class="Taluka-Name">@Model.Taluka</div>
+                        <div class="Dist-Name">@Model.dist</div>
+                        if (Model.standard == 3)
+                        { <div class="standard">3rd</div> }
+                        if (Model.standard == 4)
+                        { <div class="standard">4th</div> }
+                        if (Model.standard == 5)
+                        { <div class="standard">5th</div> }
+                        if (Model.standard == 6)
+                        { <div class="standard">6th</div>}
+                        if (Model.standard == 7)
+                        { <div class="standard">7th</div> }
+                        if (Model.standard == 8)
+                        { <div class="standard">8th</div> }
+                        <div class="Marks11">@Model.Marks1</div>
+                        <div class="Marks2">@Model.Marks2</div>
+                        <div class="Total">@Model.Total</div>
+                        <div class="outOff">300</div>
+                        <div class="Percentage">@Model.Percentage%</div>
+                        <div class="schoolName">@Model.schoolname</div>
+                        <div class="rank1">@Model.TalukaRank</div>
+                        <div class="rank2">@Model.DistaRank</div>
+                        <div class="rank3">@Model.StateRank</div>
+                    }
+                </div>
+            </div>
+
+            <div class="row">
+                <h2>सर्व गुणवंत विद्यार्थ्यांचे गुरुकुल प्रज्ञाशोध परीक्षा विभागातर्फे हार्दिक अभिनंदन. पुढील शैक्षणिक वाटचालीसाठी हार्दिक शुभेच्छा</h2>
+            </div>
+        </div>
+    </section>
+
+    @*<section class="call-to-action section-sm bg-1 overly">
+            <div class="container">
+
+                @if (Model.language == "marathi")
+                {-->
+                    <!-- section title -->
+                    <!--<div class="title text-center wow fadeInDown " data-wow-duration="500ms">
+                        <h2><span class="color">उत्तरपत्रिका</span></h2>
+                        <div class="border"></div>
+                    </div>
+                    if (Model.standard == 1 || Model.standard == 2)
+                    {
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                            </div>
+                            <div class="col-md-8 text-center">
+                                <img src="@Url.Content("~/Marathi/" + Model.barcode1 + ".jpg")" width="580" class="img-responsive imageHeight" /><br />
+                            </div>
+                        </div>--> <!-- End row -->
+                    <!--}
+                    else
+                    {
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <img src="@Url.Content("~/Marathi/" + Model.barcode1 + ".jpg")" width="580" class="img-responsive imageHeight" /><br />
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <img src="@Url.Content("~/Marathi/" + Model.barcode2 + ".jpg")" width="580" class="img-responsive imageHeight" /><br />
+                            </div>
+                        </div>--> <!-- End row -->
+                    <!--}
+                }
+                else if (Model.language == "english")
+                {-->
+                    <!-- section title -->
+                    <!--<div class="title text-center wow fadeInDown " data-wow-duration="500ms">
+                        <h2><span class="color"> Answersheets</span></h2>
+                        <div class="border"></div>
+                    </div>
+                    if (Model.standard == 1 || Model.standard == 2)
+                    {
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                            </div>
+                            <div class="col-md-8 text-center">
+                                <img src="@Url.Content("~/English/" + Model.barcode1 + ".jpg")" width="580" class="img-responsive imageHeight" /><br />
+                            </div>
+                        </div>--> <!-- End row -->
+                    <!--}
+                    else
+                    {
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <img src="@Url.Content("~/English/" + Model.barcode1 + ".jpg")" width="580" class="img-responsive imageHeight" /><br />
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <img src="@Url.Content("~/English/" + Model.barcode2 + ".jpg")" width="580" class="img-responsive imageHeight" /><br />
+                            </div>
+                        </div>--> <!-- End row -->
+                    <!--}
+                }
+                else
+                {-->
+                    <!-- section title -->
+                    <!--<div class="title text-center wow fadeInDown " data-wow-duration="500ms">
+                        <h2><span class="color"> Answersheets</span></h2>
+                        <div class="border"></div>
+                    </div>
+                    if (Model.standard == 1 || Model.standard == 2)
+                    {
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                            </div>
+                            <div class="col-md-8 text-center">
+                                <img src="@Url.Content("~/Urdu/" + Model.barcode1 + ".jpg")" width="580" class="img-responsive imageHeight" /><br />
+                            </div>
+                        </div>--> <!-- End row -->
+                    <!--}
+                    else
+                    {
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <img src="@Url.Content("~/Urdu/" + Model.barcode1 + ".jpg")" width="580" class="img-responsive imageHeight" /><br />
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <img src="@Url.Content("~/English/" + Model.barcode2 + ".jpg")" width="580" class="img-responsive imageHeight" /><br />
+                            </div>
+                        </div>--> <!-- End row -->
+                    <!--}
+                }
+            </div>-->   	<!-- End container -->
+        <!--</section>*@
+    <!-- End section -->
+}

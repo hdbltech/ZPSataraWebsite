@@ -1,0 +1,205 @@
+﻿@model gurukul.Models.ResultModel
+@{
+    ViewBag.Title = "Result";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .buttonload {
+        background-color: #41535C; /* Green background */
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        padding: 12px 24px; /* Some padding */
+        font-size: 16px; /* Set a font-size */
+    }
+
+    /* Add a right margin to each icon */
+    .fa {
+        margin-left: -12px;
+        margin-right: 8px;
+    }
+</style>
+
+<script src="~/jquery/jquery-1.8.3.min.js"></script>
+@using (@Html.BeginForm("Result", "Home", FormMethod.Post, new { @class = "form-horizontal form-content", enctype = "multipart/form-data" }))
+{
+
+    <div class="col-lg-12 col-lg-offset-1" style="color:red; font-size:x-large">
+        @Html.ValidationSummary(true, "विद्यार्थ्यांची माहिती जुळत नाही. परत प्रयत्न करा.", new { @class = "alert alert-error col-md-10 col-offset-md-1 text-center" })
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- section title -->
+            @*<div class="title text-center wow fadeIn" data-wow-duration="1500ms">
+                    <h2>निकाल <span class="color">२०२२</span> </h2>
+                    <div class="border"></div>
+                </div>*@
+            <div class="title text-center wow fadeIn text-center" data-wow-duration="1500ms">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms">
+                    <img class="img-responsive" src="~/images/ResultImage.jpeg" />
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+            <div class="contact-form col-md-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+                <form id="contact-form" method="post" action="sendmail.php" role="form">
+                    <!-- About item -->
+                    <div class="col-md-3">
+
+                    </div>
+                    <div class="col-md-6 text-center wow fadeInUp" data-wow-duration="500ms">
+                        <div class="block">
+                            <div class="form-group">
+                                <div style="visibility:collapse;">
+                                    @Html.Label("Language")  :
+                                    Marathi:   @Html.RadioButton("Language", "Marathi", new { @id = "chkMarathi" })
+                                    English: @Html.RadioButton("Language", "English", new { @id = "chkEnglish" })
+                                    <br />
+                                </div>
+                                @Html.LabelFor(model => model.dist)
+
+                                @Html.DropDownListFor(model => model.dist, new List<SelectListItem>(), new { placeholder = "जिल्हा", autocomplete = "off", @class = "form-control", maxlength = "50", tabindex = "1", @id = "cmbDistrict" })
+
+                                <br />
+
+
+
+                                @Html.LabelFor(model => model.Taluka)
+                                @Html.DropDownListFor(model => model.Taluka, new List<SelectListItem>(), new { placeholder = "तालुका", autocomplete = "off", @class = "form-control", tabindex = "2", @id = "cmbTaluka" })
+                                <br />
+
+                                @Html.LabelFor(model => model.standard)
+                                @Html.DropDownListFor(model => model.standard, new List<SelectListItem>(), new { placeholder = "इयत्ता", autocomplete = "off", @class = "form-control", tabindex = "3", @id = "cmbStandard" })
+                                <br />
+
+                                @Html.LabelFor(model => model.rollnumber)
+                                @Html.TextBoxFor(model => model.rollnumber, new { placeholder = "परीक्षा क्रमांक", autocomplete = "off", @class = "form-control", maxlength = "50", tabindex = "4" })
+                                <div class="input-group" style="color:red">
+                                    @Html.ValidationMessageFor(model => model.rollnumber)
+                                </div>
+                                <br />
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <button type="submit" value="submit" class="btn btn-main" tabindex="6">जमा करा</button>
+                            <a href="#" onclick="javascript:ConfirmDelete('@Model.StudentID',@Model.standard) id=" button" class="btn btn-main" tabindex="7">रद्द करा</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!-- /section title -->
+        </div>
+        <!-- End row -->
+    </div>
+    <!-- End container -->
+
+    <script>
+        $(document).ready(function () {
+            $("#chkMarathi").prop("checked", true);
+            $('#cmbStandard').empty();
+            $("#cmbStandard").append(new Option("४थी", 4));
+            $("#cmbStandard").append(new Option("७वी", 7));
+            $("#cmbStandard").append(new Option("३री", 3));
+            $("#cmbStandard").append(new Option("६वी", 6));
+            $("#cmbStandard").append(new Option("१ली", 1));
+            $("#cmbStandard").append(new Option("२री", 2));
+            FillDistrict("Marathi")
+
+            $('#chkMarathi').change(function () {
+                $('#cmbStandard').empty();
+                $("#cmbStandard").append(new Option("१ली", 1));
+                $("#cmbStandard").append(new Option("२री", 2));
+                $("#cmbStandard").append(new Option("३री", 3));
+                $("#cmbStandard").append(new Option("४थी", 4));
+                $("#cmbStandard").append(new Option("५वी", 5));
+                $("#cmbStandard").append(new Option("६वी", 6));
+                $("#cmbStandard").append(new Option("७वी", 7));
+                $("#cmbStandard").append(new Option("८वी", 8));
+                FillDistrict(this.value);
+            });
+
+            $('#chkEnglish').change(function () {
+                $('#cmbStandard').empty();
+                $("#cmbStandard").append(new Option("1st", 1));
+                $("#cmbStandard").append(new Option("2nd", 2));
+                $("#cmbStandard").append(new Option("3rd", 3));
+                $("#cmbStandard").append(new Option("4th", 4));
+                $("#cmbStandard").append(new Option("5th", 5));
+                $("#cmbStandard").append(new Option("6th", 6));
+                $("#cmbStandard").append(new Option("7th", 7));
+                $("#cmbStandard").append(new Option("8th", 8));
+                FillDistrict(this.value);
+            });
+
+            $("#cmbDistrict").change(function () {
+                var language = $("input[name='Language']:checked").val();
+                FillTaluka(language, $('#cmbDistrict').val());
+            });
+
+            function FillDistrict(language) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/GetDistrict",
+                    data: '{Language: "' + language + '" }',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        $('#cmbDistrict').empty();
+                        i = 0;
+                        selecteddist = "";
+                        $.each(data, function (index, element) {
+                            //alert(this);
+                            $("#cmbDistrict").append(new Option(this, this));
+                            if (i == 0) {
+                                i = 1;
+                                selecteddist = this;
+                            }
+                            FillTaluka(language, selecteddist)
+                        });
+                    },
+                    failure: function () {
+                        alert("Failed!");
+                    }
+                });
+            }
+
+
+            function FillTaluka(language, dist) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/GetTaluka",
+                    data: '{Language: "' + language + '" , District : "' + dist + '"}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        $('#cmbTaluka').empty();
+                        $.each(data, function (index, element) {
+                            //alert(this);
+                            $("#cmbTaluka").append(new Option(this, this));
+                        });
+                    },
+                    failure: function () {
+                        alert("Failed!");
+                    }
+                });
+            }
+        });
+
+    </script>
+}
+
+<style>
+    select option {
+        color: black;
+    }
+</style>

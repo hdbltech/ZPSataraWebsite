@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OMRFinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblDistrictEngs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblMarksEngs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentId" Type="int" Nullable="false" />
+          <Property Name="Barcode1" Type="nvarchar(max)" />
+          <Property Name="Barcode2" Type="nvarchar(max)" />
+          <Property Name="TalukaId" Type="int" Nullable="false" />
+          <Property Name="correctAns1" Type="int" Nullable="false" />
+          <Property Name="correctAns2" Type="int" Nullable="false" />
+          <Property Name="Mark1" Type="int" Nullable="false" />
+          <Property Name="Mark2" Type="int" Nullable="false" />
+          <Property Name="Standard" Type="int" Nullable="false" />
+          <Property Name="ExamNo" Type="int" Nullable="false" />
+          <Property Name="Birthday" Type="datetime" Nullable="false" />
+          <Property Name="StateRank" Type="int" Nullable="false" />
+          <Property Name="DistrictR" Type="int" Nullable="false" />
+          <Property Name="SubDistR" Type="int" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Paper1Attendance" Type="bit" />
+          <Property Name="Paper2Attendance" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblRNBEngs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentId" Type="int" Nullable="false" />
+          <Property Name="RollNumber" Type="int" Nullable="false" />
+          <Property Name="Barcode1" Type="int" Nullable="false" />
+          <Property Name="Barcode2" Type="int" Nullable="false" />
+          <Property Name="Barcode3" Type="int" Nullable="false" />
+          <Property Name="TalukaId" Type="int" Nullable="false" />
+          <Property Name="KendraId" Type="int" Nullable="false" />
+          <Property Name="StandardId" Type="int" Nullable="false" />
+          <Property Name="YearId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSchoolListEngs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SchoolName" Type="nvarchar(max)" />
+          <Property Name="VillageId" Type="int" Nullable="false" />
+          <Property Name="Group" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblStandardEngs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Standard" Type="nvarchar(max)" />
+          <Property Name="AmountStr" Type="nvarchar(max)" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblStudentInfoEngs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="MobileNumber" Type="nvarchar(max)" />
+          <Property Name="SchoolId" Type="int" Nullable="false" />
+          <Property Name="AgencyId" Type="int" Nullable="false" />
+          <Property Name="Language" Type="int" Nullable="false" />
+          <Property Name="SchoolTesacherPhoneNumber" Type="nvarchar(max)" />
+          <Property Name="VillageName" Type="nvarchar(max)" />
+          <Property Name="StandardId" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="nvarchar(max)" />
+          <Property Name="IsSelf" Type="bit" Nullable="false" />
+          <Property Name="DateofBirth" Type="datetime" Nullable="false" />
+          <Property Name="DainikId" Type="int" Nullable="false" />
+          <Property Name="IsDainik" Type="bit" Nullable="false" />
+          <Property Name="IsSemiEnglish" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblTalukaEngs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DistID" Type="int" Nullable="false" />
+          <Property Name="TalukaName" Type="nvarchar(max)" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblVillagesEngs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TalukaID" Type="int" Nullable="false" />
+          <Property Name="VillageName" Type="nvarchar(max)" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_dbo_tblRNBEngs_dbo_tblStandardEngs_StandardId">
+          <End Role="tblStandardEngs" Type="Self.tblStandardEngs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tblRNBEngs" Type="Self.tblRNBEngs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStandardEngs">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblRNBEngs">
+              <PropertyRef Name="StandardId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_tblSchoolListEngs_dbo_tblVillagesEngs_VillageId">
+          <End Role="tblVillagesEngs" Type="Self.tblVillagesEngs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tblSchoolListEngs" Type="Self.tblSchoolListEngs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblVillagesEngs">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSchoolListEngs">
+              <PropertyRef Name="VillageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_tblStudentInfoEngs_dbo_tblSchoolListEngs_SchoolId">
+          <End Role="tblSchoolListEngs" Type="Self.tblSchoolListEngs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tblStudentInfoEngs" Type="Self.tblStudentInfoEngs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSchoolListEngs">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblStudentInfoEngs">
+              <PropertyRef Name="SchoolId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_tblStudentInfoEngs_dbo_tblStandardEngs_StandardId">
+          <End Role="tblStandardEngs" Type="Self.tblStandardEngs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tblStudentInfoEngs" Type="Self.tblStudentInfoEngs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStandardEngs">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblStudentInfoEngs">
+              <PropertyRef Name="StandardId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_tblTalukaEngs_dbo_tblDistrictEngs_DistID">
+          <End Role="tblDistrictEngs" Type="Self.tblDistrictEngs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tblTalukaEngs" Type="Self.tblTalukaEngs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDistrictEngs">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTalukaEngs">
+              <PropertyRef Name="DistID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_tblVillagesEngs_dbo_tblTalukaEngs_TalukaID">
+          <End Role="tblTalukaEngs" Type="Self.tblTalukaEngs" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tblVillagesEngs" Type="Self.tblVillagesEngs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTalukaEngs">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblVillagesEngs">
+              <PropertyRef Name="TalukaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OMRFinalModelStoreContainer">
+          <EntitySet Name="tblDistrictEngs" EntityType="Self.tblDistrictEngs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblMarksEngs" EntityType="Self.tblMarksEngs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblRNBEngs" EntityType="Self.tblRNBEngs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSchoolListEngs" EntityType="Self.tblSchoolListEngs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStandardEngs" EntityType="Self.tblStandardEngs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStudentInfoEngs" EntityType="Self.tblStudentInfoEngs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTalukaEngs" EntityType="Self.tblTalukaEngs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblVillagesEngs" EntityType="Self.tblVillagesEngs" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_tblRNBEngs_dbo_tblStandardEngs_StandardId" Association="Self.FK_dbo_tblRNBEngs_dbo_tblStandardEngs_StandardId">
+            <End Role="tblStandardEngs" EntitySet="tblStandardEngs" />
+            <End Role="tblRNBEngs" EntitySet="tblRNBEngs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_tblSchoolListEngs_dbo_tblVillagesEngs_VillageId" Association="Self.FK_dbo_tblSchoolListEngs_dbo_tblVillagesEngs_VillageId">
+            <End Role="tblVillagesEngs" EntitySet="tblVillagesEngs" />
+            <End Role="tblSchoolListEngs" EntitySet="tblSchoolListEngs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_tblStudentInfoEngs_dbo_tblSchoolListEngs_SchoolId" Association="Self.FK_dbo_tblStudentInfoEngs_dbo_tblSchoolListEngs_SchoolId">
+            <End Role="tblSchoolListEngs" EntitySet="tblSchoolListEngs" />
+            <End Role="tblStudentInfoEngs" EntitySet="tblStudentInfoEngs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_tblStudentInfoEngs_dbo_tblStandardEngs_StandardId" Association="Self.FK_dbo_tblStudentInfoEngs_dbo_tblStandardEngs_StandardId">
+            <End Role="tblStandardEngs" EntitySet="tblStandardEngs" />
+            <End Role="tblStudentInfoEngs" EntitySet="tblStudentInfoEngs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_tblTalukaEngs_dbo_tblDistrictEngs_DistID" Association="Self.FK_dbo_tblTalukaEngs_dbo_tblDistrictEngs_DistID">
+            <End Role="tblDistrictEngs" EntitySet="tblDistrictEngs" />
+            <End Role="tblTalukaEngs" EntitySet="tblTalukaEngs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_tblVillagesEngs_dbo_tblTalukaEngs_TalukaID" Association="Self.FK_dbo_tblVillagesEngs_dbo_tblTalukaEngs_TalukaID">
+            <End Role="tblTalukaEngs" EntitySet="tblTalukaEngs" />
+            <End Role="tblVillagesEngs" EntitySet="tblVillagesEngs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OMRFinalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="OMRFinalEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblMarksEngs" EntityType="OMRFinalModel.tblMarksEng" />
+          <EntitySet Name="tblRNBEngs" EntityType="OMRFinalModel.tblRNBEng" />
+          <EntitySet Name="tblSchoolListEngs" EntityType="OMRFinalModel.tblSchoolListEng" />
+          <EntitySet Name="tblStudentInfoEngs" EntityType="OMRFinalModel.tblStudentInfoEng" />
+          <AssociationSet Name="FK_dbo_tblStudentInfoEngs_dbo_tblSchoolListEngs_SchoolId" Association="OMRFinalModel.FK_dbo_tblStudentInfoEngs_dbo_tblSchoolListEngs_SchoolId">
+            <End Role="tblSchoolListEng" EntitySet="tblSchoolListEngs" />
+            <End Role="tblStudentInfoEng" EntitySet="tblStudentInfoEngs" />
+          </AssociationSet>
+          <EntitySet Name="tblDistrictEngs" EntityType="OMRFinalModel.tblDistrictEng" />
+          <EntitySet Name="tblTalukaEngs" EntityType="OMRFinalModel.tblTalukaEng" />
+          <EntitySet Name="tblVillagesEngs" EntityType="OMRFinalModel.tblVillagesEng" />
+          <AssociationSet Name="FK_dbo_tblTalukaEngs_dbo_tblDistrictEngs_DistID" Association="OMRFinalModel.FK_dbo_tblTalukaEngs_dbo_tblDistrictEngs_DistID">
+            <End Role="tblDistrictEng" EntitySet="tblDistrictEngs" />
+            <End Role="tblTalukaEng" EntitySet="tblTalukaEngs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_tblSchoolListEngs_dbo_tblVillagesEngs_VillageId" Association="OMRFinalModel.FK_dbo_tblSchoolListEngs_dbo_tblVillagesEngs_VillageId">
+            <End Role="tblVillagesEng" EntitySet="tblVillagesEngs" />
+            <End Role="tblSchoolListEng" EntitySet="tblSchoolListEngs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_tblVillagesEngs_dbo_tblTalukaEngs_TalukaID" Association="OMRFinalModel.FK_dbo_tblVillagesEngs_dbo_tblTalukaEngs_TalukaID">
+            <End Role="tblTalukaEng" EntitySet="tblTalukaEngs" />
+            <End Role="tblVillagesEng" EntitySet="tblVillagesEngs" />
+          </AssociationSet>
+          <EntitySet Name="tblStandardEngs" EntityType="OMRFinalModel.tblStandardEng" />
+          <AssociationSet Name="FK_dbo_tblRNBEngs_dbo_tblStandardEngs_StandardId" Association="OMRFinalModel.FK_dbo_tblRNBEngs_dbo_tblStandardEngs_StandardId">
+            <End Role="tblStandardEng" EntitySet="tblStandardEngs" />
+            <End Role="tblRNBEng" EntitySet="tblRNBEngs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_tblStudentInfoEngs_dbo_tblStandardEngs_StandardId" Association="OMRFinalModel.FK_dbo_tblStudentInfoEngs_dbo_tblStandardEngs_StandardId">
+            <End Role="tblStandardEng" EntitySet="tblStandardEngs" />
+            <End Role="tblStudentInfoEng" EntitySet="tblStudentInfoEngs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tblMarksEng">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentId" Type="Int32" Nullable="false" />
+          <Property Name="Barcode1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Barcode2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TalukaId" Type="Int32" Nullable="false" />
+          <Property Name="correctAns1" Type="Int32" Nullable="false" />
+          <Property Name="correctAns2" Type="Int32" Nullable="false" />
+          <Property Name="Mark1" Type="Int32" Nullable="false" />
+          <Property Name="Mark2" Type="Int32" Nullable="false" />
+          <Property Name="Standard" Type="Int32" Nullable="false" />
+          <Property Name="ExamNo" Type="Int32" Nullable="false" />
+          <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="StateRank" Type="Int32" Nullable="false" />
+          <Property Name="DistrictR" Type="Int32" Nullable="false" />
+          <Property Name="SubDistR" Type="Int32" Nullable="false" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Paper1Attendance" Type="Boolean" />
+          <Property Name="Paper2Attendance" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tblRNBEng">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentId" Type="Int32" Nullable="false" />
+          <Property Name="RollNumber" Type="Int32" Nullable="false" />
+          <Property Name="Barcode1" Type="Int32" Nullable="false" />
+          <Property Name="Barcode2" Type="Int32" Nullable="false" />
+          <Property Name="Barcode3" Type="Int32" Nullable="false" />
+          <Property Name="TalukaId" Type="Int32" Nullable="false" />
+          <Property Name="KendraId" Type="Int32" Nullable="false" />
+          <Property Name="StandardId" Type="Int32" Nullable="false" />
+          <Property Name="YearId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tblStandardEng" Relationship="OMRFinalModel.FK_dbo_tblRNBEngs_dbo_tblStandardEngs_StandardId" FromRole="tblRNBEng" ToRole="tblStandardEng" />
+        </EntityType>
+        <EntityType Name="tblSchoolListEng">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SchoolName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VillageId" Type="Int32" Nullable="false" />
+          <Property Name="Group" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblStudentInfoEngs" Relationship="OMRFinalModel.FK_dbo_tblStudentInfoEngs_dbo_tblSchoolListEngs_SchoolId" FromRole="tblSchoolListEng" ToRole="tblStudentInfoEng" />
+          <NavigationProperty Name="tblVillagesEng" Relationship="OMRFinalModel.FK_dbo_tblSchoolListEngs_dbo_tblVillagesEngs_VillageId" FromRole="tblSchoolListEng" ToRole="tblVillagesEng" />
+        </EntityType>
+        <EntityType Name="tblStudentInfoEng">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SchoolId" Type="Int32" Nullable="false" />
+          <Property Name="AgencyId" Type="Int32" Nullable="false" />
+          <Property Name="Language" Type="Int32" Nullable="false" />
+          <Property Name="SchoolTesacherPhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VillageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StandardId" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsSelf" Type="Boolean" Nullable="false" />
+          <Property Name="DateofBirth" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DainikId" Type="Int32" Nullable="false" />
+          <Property Name="IsDainik" Type="Boolean" Nullable="false" />
+          <Property Name="IsSemiEnglish" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tblSchoolListEng" Relationship="OMRFinalModel.FK_dbo_tblStudentInfoEngs_dbo_tblSchoolListEngs_SchoolId" FromRole="tblStudentInfoEng" ToRole="tblSchoolListEng" />
+          <NavigationProperty Name="tblStandardEng" Relationship="OMRFinalModel.FK_dbo_tblStudentInfoEngs_dbo_tblStandardEngs_StandardId" FromRole="tblStudentInfoEng" ToRole="tblStandardEng" />
+        </EntityType>
+        <Association Name="FK_dbo_tblStudentInfoEngs_dbo_tblSchoolListEngs_SchoolId">
+          <End Type="OMRFinalModel.tblSchoolListEng" Role="tblSchoolListEng" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="OMRFinalModel.tblStudentInfoEng" Role="tblStudentInfoEng" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSchoolListEng">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tblStudentInfoEng">
+              <PropertyRef Name="SchoolId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tblDistrictEng">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblTalukaEngs" Relationship="OMRFinalModel.FK_dbo_tblTalukaEngs_dbo_tblDistrictEngs_DistID" FromRole="tblDistrictEng" ToRole="tblTalukaEng" />
+        </EntityType>
+        <EntityType Name="tblTalukaEng">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DistID" Type="Int32" Nullable="false" />
+          <Property Name="TalukaName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblDistrictEng" Relationship="OMRFinalModel.FK_dbo_tblTalukaEngs_dbo_tblDistrictEngs_DistID" FromRole="tblTalukaEng" ToRole="tblDistrictEng" />
+          <NavigationProperty Name="tblVillagesEngs" Relationship="OMRFinalModel.FK_dbo_tblVillagesEngs_dbo_tblTalukaEngs_TalukaID" FromRole="tblTalukaEng" ToRole="tblVillagesEng" />
+        </EntityType>
+        <EntityType Name="tblVillagesEng">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TalukaID" Type="Int32" Nullable="false" />
+          <Property Name="VillageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblSchoolListEngs" Relationship="OMRFinalModel.FK_dbo_tblSchoolListEngs_dbo_tblVillagesEngs_VillageId" FromRole="tblVillagesEng" ToRole="tblSchoolListEng" />
+          <NavigationProperty Name="tblTalukaEng" Relationship="OMRFinalModel.FK_dbo_tblVillagesEngs_dbo_tblTalukaEngs_TalukaID" FromRole="tblVillagesEng" ToRole="tblTalukaEng" />
+        </EntityType>
+        <Association Name="FK_dbo_tblTalukaEngs_dbo_tblDistrictEngs_DistID">
+          <End Type="OMRFinalModel.tblDistrictEng" Role="tblDistrictEng" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="OMRFinalModel.tblTalukaEng" Role="tblTalukaEng" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDistrictEng">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTalukaEng">
+              <PropertyRef Name="DistID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_tblSchoolListEngs_dbo_tblVillagesEngs_VillageId">
+          <End Type="OMRFinalModel.tblVillagesEng" Role="tblVillagesEng" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="OMRFinalModel.tblSchoolListEng" Role="tblSchoolListEng" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblVillagesEng">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSchoolListEng">
+              <PropertyRef Name="VillageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_tblVillagesEngs_dbo_tblTalukaEngs_TalukaID">
+          <End Type="OMRFinalModel.tblTalukaEng" Role="tblTalukaEng" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="OMRFinalModel.tblVillagesEng" Role="tblVillagesEng" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTalukaEng">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblVillagesEng">
+              <PropertyRef Name="TalukaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tblStandardEng">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Standard" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AmountStr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblRNBEngs" Relationship="OMRFinalModel.FK_dbo_tblRNBEngs_dbo_tblStandardEngs_StandardId" FromRole="tblStandardEng" ToRole="tblRNBEng" />
+          <NavigationProperty Name="tblStudentInfoEngs" Relationship="OMRFinalModel.FK_dbo_tblStudentInfoEngs_dbo_tblStandardEngs_StandardId" FromRole="tblStandardEng" ToRole="tblStudentInfoEng" />
+        </EntityType>
+        <Association Name="FK_dbo_tblRNBEngs_dbo_tblStandardEngs_StandardId">
+          <End Type="OMRFinalModel.tblStandardEng" Role="tblStandardEng" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="OMRFinalModel.tblRNBEng" Role="tblRNBEng" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStandardEng">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblRNBEng">
+              <PropertyRef Name="StandardId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_tblStudentInfoEngs_dbo_tblStandardEngs_StandardId">
+          <End Type="OMRFinalModel.tblStandardEng" Role="tblStandardEng" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="OMRFinalModel.tblStudentInfoEng" Role="tblStudentInfoEng" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStandardEng">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblStudentInfoEng">
+              <PropertyRef Name="StandardId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OMRFinalModelStoreContainer" CdmEntityContainer="OMRFinalEntities">
+          <EntitySetMapping Name="tblMarksEngs">
+            <EntityTypeMapping TypeName="OMRFinalModel.tblMarksEng">
+              <MappingFragment StoreEntitySet="tblMarksEngs">
+                <ScalarProperty Name="Paper2Attendance" ColumnName="Paper2Attendance" />
+                <ScalarProperty Name="Paper1Attendance" ColumnName="Paper1Attendance" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="SubDistR" ColumnName="SubDistR" />
+                <ScalarProperty Name="DistrictR" ColumnName="DistrictR" />
+                <ScalarProperty Name="StateRank" ColumnName="StateRank" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="ExamNo" ColumnName="ExamNo" />
+                <ScalarProperty Name="Standard" ColumnName="Standard" />
+                <ScalarProperty Name="Mark2" ColumnName="Mark2" />
+                <ScalarProperty Name="Mark1" ColumnName="Mark1" />
+                <ScalarProperty Name="correctAns2" ColumnName="correctAns2" />
+                <ScalarProperty Name="correctAns1" ColumnName="correctAns1" />
+                <ScalarProperty Name="TalukaId" ColumnName="TalukaId" />
+                <ScalarProperty Name="Barcode2" ColumnName="Barcode2" />
+                <ScalarProperty Name="Barcode1" ColumnName="Barcode1" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblRNBEngs">
+            <EntityTypeMapping TypeName="OMRFinalModel.tblRNBEng">
+              <MappingFragment StoreEntitySet="tblRNBEngs">
+                <ScalarProperty Name="YearId" ColumnName="YearId" />
+                <ScalarProperty Name="StandardId" ColumnName="StandardId" />
+                <ScalarProperty Name="KendraId" ColumnName="KendraId" />
+                <ScalarProperty Name="TalukaId" ColumnName="TalukaId" />
+                <ScalarProperty Name="Barcode3" ColumnName="Barcode3" />
+                <ScalarProperty Name="Barcode2" ColumnName="Barcode2" />
+                <ScalarProperty Name="Barcode1" ColumnName="Barcode1" />
+                <ScalarProperty Name="RollNumber" ColumnName="RollNumber" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSchoolListEngs">
+            <EntityTypeMapping TypeName="OMRFinalModel.tblSchoolListEng">
+              <MappingFragment StoreEntitySet="tblSchoolListEngs">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Group" ColumnName="Group" />
+                <ScalarProperty Name="VillageId" ColumnName="VillageId" />
+                <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStudentInfoEngs">
+            <EntityTypeMapping TypeName="OMRFinalModel.tblStudentInfoEng">
+              <MappingFragment StoreEntitySet="tblStudentInfoEngs">
+                <ScalarProperty Name="IsSemiEnglish" ColumnName="IsSemiEnglish" />
+                <ScalarProperty Name="IsDainik" ColumnName="IsDainik" />
+                <ScalarProperty Name="DainikId" ColumnName="DainikId" />
+                <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+                <ScalarProperty Name="IsSelf" ColumnName="IsSelf" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="StandardId" ColumnName="StandardId" />
+                <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+                <ScalarProperty Name="SchoolTesacherPhoneNumber" ColumnName="SchoolTesacherPhoneNumber" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="AgencyId" ColumnName="AgencyId" />
+                <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblDistrictEngs">
+            <EntityTypeMapping TypeName="OMRFinalModel.tblDistrictEng">
+              <MappingFragment StoreEntitySet="tblDistrictEngs">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTalukaEngs">
+            <EntityTypeMapping TypeName="OMRFinalModel.tblTalukaEng">
+              <MappingFragment StoreEntitySet="tblTalukaEngs">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="TalukaName" ColumnName="TalukaName" />
+                <ScalarProperty Name="DistID" ColumnName="DistID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblVillagesEngs">
+            <EntityTypeMapping TypeName="OMRFinalModel.tblVillagesEng">
+              <MappingFragment StoreEntitySet="tblVillagesEngs">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+                <ScalarProperty Name="TalukaID" ColumnName="TalukaID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStandardEngs">
+            <EntityTypeMapping TypeName="OMRFinalModel.tblStandardEng">
+              <MappingFragment StoreEntitySet="tblStandardEngs">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="AmountStr" ColumnName="AmountStr" />
+                <ScalarProperty Name="Standard" ColumnName="Standard" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

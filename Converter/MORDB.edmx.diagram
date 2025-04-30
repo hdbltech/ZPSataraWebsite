@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="69386846f31d45aa961b994b4b05f04c" Name="Diagram1">
+        <EntityTypeShape EntityType="OMRFinalModel.tblMarksEng" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="OMRFinalModel.tblRNBEng" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="OMRFinalModel.tblSchoolListEng" Width="1.5" PointX="0.75" PointY="2.125" />
+        <EntityTypeShape EntityType="OMRFinalModel.tblStudentInfoEng" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="OMRFinalModel.FK_dbo_tblStudentInfoEngs_dbo_tblSchoolListEngs_SchoolId" />
+        <EntityTypeShape EntityType="OMRFinalModel.tblDistrictEng" Width="1.5" PointX="0.75" PointY="18.375" />
+        <EntityTypeShape EntityType="OMRFinalModel.tblTalukaEng" Width="1.5" PointX="0.75" PointY="15.25" />
+        <EntityTypeShape EntityType="OMRFinalModel.tblVillagesEng" Width="1.5" PointX="0.75" PointY="11.25" />
+        <AssociationConnector Association="OMRFinalModel.FK_dbo_tblTalukaEngs_dbo_tblDistrictEngs_DistID" />
+        <AssociationConnector Association="OMRFinalModel.FK_dbo_tblSchoolListEngs_dbo_tblVillagesEngs_VillageId" />
+        <AssociationConnector Association="OMRFinalModel.FK_dbo_tblVillagesEngs_dbo_tblTalukaEngs_TalukaID" />
+        <EntityTypeShape EntityType="OMRFinalModel.tblStandardEng" Width="1.5" PointX="0.75" PointY="4.25" />
+        <AssociationConnector Association="OMRFinalModel.FK_dbo_tblRNBEngs_dbo_tblStandardEngs_StandardId" />
+        <AssociationConnector Association="OMRFinalModel.FK_dbo_tblStudentInfoEngs_dbo_tblStandardEngs_StandardId" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
